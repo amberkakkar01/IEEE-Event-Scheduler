@@ -1,0 +1,503 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>IEEE Event Scheduler</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var maxLength = 50;
+            $(".show-read-more").each(function() {
+                var myStr = $(this).text();
+                if ($.trim(myStr).length > maxLength) {
+                    var newStr = myStr.substring(0, maxLength);
+                    var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+                    $(this).empty().html(newStr);
+                    $(this).append(' <a href="javascript:void(0);" class="read-more">read more...</a>');
+                    $(this).append('<span class="more-text">' + removedStr + '</span>');
+                }
+            });
+            $(".read-more").click(function() {
+                $(this).siblings(".more-text").contents().unwrap();
+                $(this).remove();
+            });
+        });
+    </script>
+
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .bg-dark {
+            background-color: #000 !important;
+        }
+        
+        .clamp {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical
+        }
+        
+        .social-buttons {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            padding-bottom: 5px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 10px;
+            /* Helper class to divide the icons */
+        }
+        
+        .social-buttons .social-margin {
+            margin-right: 15px;
+        }
+        
+        .social-buttons a,
+        .social-buttons a:hover,
+        .social-buttons a:focus,
+        .social-buttons a:active {
+            text-decoration: none;
+        }
+        
+        .social-buttons .social-icon {
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            -moz-border-radius: 138px;
+            -webkit-border-radius: 138px;
+            border-radius: 138px;
+            border: 5px solid;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            line-height: 1px;
+            padding-top: 11px;
+            transition: all 0.5s;
+            /* Facebook Button Styling */
+            /* Twitter Button Styling */
+            /* Google+ Button Styling */
+            /* Linkedin Button Styling */
+            /* Pinterest Button Styling */
+            /* Behance Button Styling */
+            /* Github Button Styling */
+            /* Youtube Button Styling */
+            /* Soundcloud Button Styling */
+        }
+        
+        .social-buttons .social-icon:hover {
+            transform: rotate(360deg) scale(1.3);
+        }
+        
+        .social-buttons .social-icon.facebook {
+            font-size: 22px;
+            padding-top: 9px;
+            border-color: #3b5998;
+            background-color: #3b5998;
+            color: #ffffff;
+        }
+        
+        .social-buttons .social-icon.facebook:hover {
+            background-color: #ffffff;
+            color: #3b5998;
+        }
+        
+        .social-buttons .social-icon.linkedin {
+            font-size: 24px;
+            padding-top: 8px;
+            padding-left: 1px;
+            background-color: #0976b4;
+            color: #ffffff;
+            border-color: #0976b4;
+        }
+        
+        .social-buttons .social-icon.linkedin:hover {
+            background-color: #ffffff;
+            color: #0976b4;
+        }
+        
+        .social-buttons .social-icon.instagram {
+            font-size: 22px;
+            padding-top: 9px;
+            background-color: #cb2027;
+            color: #ffffff;
+            border-color: #cb2027;
+        }
+        
+        .social-buttons .social-icon.instagram:hover {
+            background-color: #ffffff;
+            color: #cb2027;
+        }
+        
+        .social-buttons .social-icon.medium {
+            font-size: 22px;
+            padding-top: 9px;
+            background-color: #cb2027;
+            color: #ffffff;
+            border-color: #cb2027;
+        }
+        
+        .social-buttons .social-icon.medium:hover {
+            background-color: #ffffff;
+            color: #cb2027;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="logoiee2.png" class="img-fluid" alt="Responsive image" style="width:18%;" class="w3-round"><br></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="topnav-right">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about2.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="bg_1.jpg" class="img-fluid" alt="Responsive image" style="width:18%;" class="w3-round">
+                    <div class="container">
+                        <div class="carousel-caption text-left">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="bg_2.jpg" class="img-fluid" alt="Responsive image" style="width:auto;" class="w3-round">
+                    <div class="container">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="bg_3.jpg" class="img-fluid" alt="Responsive image" style="width:18%;" class="w3-round">
+                    <div class="container">
+                        <div class="carousel-caption text-right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upcoming Events</h3>
+        <main role="main">
+
+            <div class="album py-5 bg-light">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="images/cloud.jpg" class="img-fluid" alt="">
+                                <div class="card-body">
+                                    <h4>Microsoft Cloud Workshop</h4>
+                                    <p class="card-text">Microsoft Cloud Workshop (MCW) is a hands-on community development experience.</p><br /><br /><br />
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                                                <a href="cloud.html"><span>View</span></a>
+                                            </button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Enroll</button>
+                                        </div>
+                                        <small class="text-muted">6 hours</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="images/cyber.jpg" class="img-fluid" alt="">
+                                <div class="card-body">
+                                    <h4>Cyberdome</h4>
+                                    <p class="card-text">Cyberdome is workshop which focus on basic of Sercuity with hands on experiments.</p><br /><br /><br />
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                                                <a href="cyber.html"><span>View</span></a>
+                                            </button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Enroll</button>
+                                        </div>
+                                        <small class="text-muted">6 hours</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="images/iot.jpg" class="img-fluid" alt="">
+                                <div class="card-body">
+                                    <h4>Seminar on IOT</h4>
+                                    <p class="card-text">Internet of things (IoT) is a system of interrelated computing devices, mechanical and the ability to transfer data over a network without requiring human or computer interaction.</p><br />
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                                                <a href="iot.html"><span>View</span></a>
+                                            </button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Enroll</button>
+                                        </div>
+                                        <small class="text-muted">4 hours</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="images/linux.jpg" class="img-fluid" alt="">
+                                <div class="card-body">
+                                    <h4>Linux Bootcamp</h4>
+                                    <p class="card-text">Linux System Administrator bootcamp provides a thorough introduction to UNIX and Linux fundamentals as well as essential administration.</p><br /><br /><br /><br />
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                                                <a href="linux.html"><span>View</span></a>
+                                            </button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Enroll</button>
+                                        </div>
+                                        <small class="text-muted">8 hours</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="images/web.jpg" class="img-fluid" alt="">
+                                <div class="card-body">
+                                    <h4>Seminar on Web Development</h4>
+                                    <p class="card-text">Web development refers to building, creating, and an maintaining websites. It includes aspects such as web design, web publishing, web programming.</p><br />
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                                                <a href="webdev.html"><span>View</span></a>
+                                            </button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Enroll</button>
+                                        </div>
+                                        <small class="text-muted">5 hours</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="images/robo.jpg" class="img-fluid" alt="">
+                                <div class="card-body">
+                                    <h4>Robotics</h4>
+                                    <p class="card-text">Robotics involves design, construction, operation, and use of robots. The goal of robotics is to design intelligent machines that can help.</p><br />
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                                                <a href="robo.html"><span>View</span></a>
+                                            </button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Enroll</button>
+                                        </div>
+                                        <small class="text-muted">5 hours</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="images/ai.jpg" class="img-fluid" alt="">
+                                <div class="card-body">
+                                    <h4>Webinar On AI & ML</h4>
+                                    <p class="card-text">The goal is to learn from data on certain task to maximize the performance of machine on this task. AI is decision making. ML allows system to learn new things from data.</p><br /><br /><br />
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                                                <a href="ai.html"><span>View</span></a>
+                                            </button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Enroll</button>
+                                        </div>
+                                        <small class="text-muted">5 hours</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="images/blockchain.jpg" class="img-fluid" alt="">
+                                <div class="card-body">
+                                    <h4>Blockchain Webinar</h4>
+                                    <p class="card-text">A Blockchain,originally block chain, is a growing list of records, called blocks, that are linked using cryptography.Each block contains a cryptographic hash of the previous block, a timestamp, and transaction</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                                                <a href="block.html"><span>View</span></a>
+                                            </button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Enroll</button>
+                                        </div>
+                                        <small class="text-muted">8 hours</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="images/git.jpg" class="img-fluid" alt="">
+                                <div class="card-body">
+                                    <h4>Workshop on Git & GitHub </h4>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p><br /><br /><br />
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                                                <a href="git.html"><span>View</span></a>
+                                            </button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Enroll</button>
+                                        </div>
+                                        <small class="text-muted">5 hours</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+
+        <!-- FOOTER -->
+        <!-- Footer -->
+        <footer class="w3-container w3-padding-32 w3-indigo">
+            <div class="w3-row-padding" align="center">
+                <footer class="footer-area footer--light">
+
+
+                    <div class="social-buttons">
+                        <div class="mini-footer">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="copyright-text">
+
+                                            <!-- facebook  Button -->
+
+                                            <a href="https://www.facebook.com/ieeeditu/" target="blank" class="social-margin">
+                                                <div class="social-icon facebook">
+                                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                                </div>
+                                            </a>
+
+                                            <!-- instagram Button -->
+                                            <a href="https://www.instagram.com/ieeeditu/?hl=en" target="blank" class="social-margin">
+                                                <div class="social-icon instagram">
+                                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                                </div>
+                                            </a>
+                                            <!-- LinkedIn Button -->
+                                            <a href="https://www.linkedin.com/company/ieeeditu" class="social-margin" target="blank">
+                                                <div class="social-icon linkedin">
+                                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                                </div>
+                                            </a>
+
+                                            <!-- mediumButton -->
+                                            <a href="https://medium.com/ieeeditu" target="blank" class="social-margin">
+                                                <div class="social-icon twitter">
+                                                    <i class="fa fa-medium" aria-hidden="true"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                </footer>
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
+    </script>
+    <script src="../assets/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
