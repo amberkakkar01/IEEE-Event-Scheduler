@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 
 
     <!--<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
@@ -40,9 +42,6 @@
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.css" rel="stylesheet">
-    <script>
-        < script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" >
-    </script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
@@ -92,7 +91,7 @@
     <link href="carousel.css" rel="stylesheet">
 </head>
 
-<body>
+<body ng-app="myApp">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -347,12 +346,15 @@
 
         <!-- Footer -->
         <footer class="w3-container w3-padding-32 w3-indigo">
-            <div class="w3-row-padding">
-                <div class="w3-third">
+            <div class="w2-row-padding">
+                <div class="w2-second">
                     <h3>ABOUT</h3>
                     <p>The IEEE Computer Society is the world’s leading membership organization dedicated to computer science and technology. Serving more than 60,000 members, the IEEE Computer Society is the trusted information, networking, and career-development
-                        source for a global community of technology leaders that includes researchers, educators, software engineers, IT professionals, employers, and students.</p>
-                </div>
+                        source for a global community of technology leaders that includes researchers, educators, software engineers, IT professionals, employers, and students. The IEEE Computer Society sponsors more than 200 technical conferences and
+                        events each year, including the industry-oriented “Rock Stars” series, all over the world, aimed at research and industry professionals. Our publications are peer-reviewed, indexed, and authored by technology thought leaders worldwide,
+                        and include 17 scholarly journals and 13 magazines featuring the latest technology trends. We also offer cutting-edge products such as the myComputer app (available for iOS or Android), that provide unprecedented user-driven access
+                        to our content, and our Digital Library with more than 550,000 articles and papers spanning the full spectrum of technology.</p>
+                </div><br>
 
                 <div class="w3-third">
                     <h3>Social Media</h3>
